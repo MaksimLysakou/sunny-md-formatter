@@ -41,7 +41,6 @@ body {
 }
 
 .app-header h1 {
-  margin: 0;
   font-size: clamp(1.05rem, 1.6vw, 1.3rem);
   font-weight: 650;
   letter-spacing: 0.01em;
@@ -83,7 +82,6 @@ body {
   border: 0;
   outline: 0;
   padding: 1rem;
-  margin: 0;
   font: 500 0.95rem/1.55 "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
   color: var(--text);
@@ -113,44 +111,39 @@ body {
 }
 
 .doc-theme h1,
+.doc-theme .doc-title,
 .doc-theme h2,
 .doc-theme h3 {
   font-weight: 700;
 }
 
-.doc-theme h1 {
-  margin: 0 0 48px;
+.doc-theme h1,
+.doc-theme .doc-title {
   font-size: 64px;
   line-height: 80px;
 }
 
 .doc-theme h2 {
-  margin: 40px 0 16px;
   font-size: 48px;
   line-height: 64px;
-  scroll-margin-top: 110px;
 }
 
 .doc-theme h3 {
-  margin: 28px 0 12px;
   font-size: 32px;
   line-height: 42px;
 }
 
 .doc-theme p {
-  margin: 0 0 20px;
   font-size: 16px;
   line-height: 28px;
 }
 
 .doc-theme ul,
 .doc-theme ol {
-  margin: 0 0 20px;
   padding-left: 1.5em;
 }
 
 .doc-theme li {
-  margin-bottom: 10px;
   line-height: 28px;
 }
 
@@ -164,7 +157,6 @@ body {
 }
 
 .doc-theme pre {
-  margin: 24px 0;
   padding: 20px 24px;
   background: #0f172a;
   color: #e6edf3;
@@ -235,6 +227,7 @@ body {
 }
 
 .doc-theme a {
+  color: #212b36;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 0.16em;
 }
@@ -257,7 +250,8 @@ body {
 }
 
 @media (max-width: 800px) {
-  .doc-theme h1 {
+  .doc-theme h1,
+  .doc-theme .doc-title {
     font-size: 56px;
     line-height: 70px;
   }
@@ -269,7 +263,8 @@ body {
 }
 
 @media (max-width: 575px) {
-  .doc-theme h1 {
+  .doc-theme h1,
+  .doc-theme .doc-title {
     font-size: 40px;
     line-height: 50px;
   }
@@ -294,10 +289,6 @@ body {
   max-width: 746px;
 }
 
-.post-main-content > div > .author {
-  margin: 64px 0 128px;
-}
-
 .post-main-content .toc-content a {
   color: #1d4ed8;
   text-decoration: underline;
@@ -305,22 +296,11 @@ body {
   text-underline-offset: 0.16em;
 }
 
-.post-main-content .toc-content > p {
-  margin-bottom: 20px;
-}
 
 .post-main-content .toc-content li {
-  margin-bottom: 10px;
   line-height: 28px;
 }
 
-.post-main-content .toc-content h3,
-.post-main-content .toc-content h2,
-.doc-theme h3,
-.doc-theme h2 {
-  margin: 40px 0 16px;
-  scroll-margin-top: 110px;
-}
 
 .post-main-content .toc-content h2,
 .doc-theme h2 {
@@ -334,43 +314,11 @@ body {
   line-height: 30px;
 }
 
-.post-main-content .toc-content .faq-item h3 {
-  margin: 0;
-}
-
-.post-main-content .toc-content .faq h2 {
-  margin: 0 0 16px;
-}
-
-.post-main-content .toc-content > .typography5 {
-  margin-bottom: 40px;
-}
-
 .post-main-content .toc-content > .typography5 + p::first-letter {
   float: left;
   padding: 20px 0;
-  margin-right: 16px;
   font-weight: 700;
   font-size: 80px;
-}
-
-.post-main-content h1,
-.post-main-content .author,
-.post-main-content .divider,
-.doc-theme h1 {
-  margin-bottom: 48px;
-}
-
-.post-main-content .share-block {
-  margin: 48px 0 64px;
-}
-
-.post-main-content .need-help-container {
-  margin: 40px 0;
-}
-
-.post-main-content .kg-image-card {
-  margin: 0.8em 0 2.3em;
 }
 
 .post-main-content .kg-image-card img {
@@ -381,7 +329,6 @@ body {
 }
 
 .post-main-content .kg-image-card figcaption {
-  margin: 1em auto 0;
   color: #7d8790;
   font-size: 75%;
   line-height: 1.5em;
@@ -390,7 +337,6 @@ body {
 
 .post-main-content blockquote,
 .doc-theme blockquote {
-  margin: 0 0 1.5em;
   padding: 0 1.5em;
   border-left: 3px solid #2ec4c8;
   background: transparent;
@@ -402,12 +348,10 @@ body {
   height: 1px;
   background-color: #dbe1e7;
   border: none;
-  margin: 48px 0;
 }
 
 .post-main-content .kg-bookmark-card {
   padding: 40px 0;
-  margin: 40px 0;
   border-top: 1px solid #dbe1e7;
   border-bottom: 1px solid #dbe1e7;
 }
@@ -437,7 +381,6 @@ body {
 
 .post-main-content .kg-bookmark-card .kg-bookmark-description {
   display: block;
-  margin: 0;
   max-height: unset;
   font-size: 13px;
   line-height: 24px;
@@ -445,7 +388,6 @@ body {
 }
 
 .post-main-content .kg-bookmark-card .kg-bookmark-title {
-  margin-bottom: 16px;
   font-size: 24px;
   line-height: 36px;
   color: #212b36;
@@ -455,7 +397,6 @@ body {
   display: flex;
   gap: 40px;
   padding: 40px 78px 40px 40px;
-  margin: 40px 0;
 }
 
 .post-main-content .quote-container svg {
@@ -465,7 +406,6 @@ body {
 }
 
 .post-main-content .subscription-form {
-  margin: 40px 0;
   padding: 40px;
   background: url("../../assets/images/subscriptionFormBg.webp");
   background-size: cover;
@@ -473,23 +413,11 @@ body {
   border-radius: 16px;
 }
 
-.post-main-content .subscription-form .typography3 {
-  margin-bottom: 4px;
-}
-
-.post-main-content .subscription-form .body1 {
-  margin-bottom: 24px;
-}
-
 .post-main-content .faq {
   max-width: unset;
   padding: 0;
-  margin: 40px 0;
 }
 
-.post-main-content .faq .typography4 {
-  margin-bottom: 16px;
-}
 
 .post-side-menu {
   position: sticky;
@@ -569,7 +497,6 @@ body {
 
 .post-side-menu .toc-title {
   display: none;
-  margin-bottom: 16px;
 }
 
 .post-side-menu .toc-title.show {
@@ -598,7 +525,6 @@ body {
 }
 
 .post-side-menu .sidebar-cta .typography4 {
-  margin-bottom: 32px;
   letter-spacing: 0;
   color: #ffffff;
 }
@@ -616,22 +542,12 @@ body {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  margin: 48px 0;
 }
 
 .need-project-cta {
   position: relative;
   padding: 40px;
-  margin: 40px 0;
   border-radius: 24px;
-}
-
-.need-project-cta .typography3 {
-  margin-bottom: 8px;
-}
-
-.need-project-cta .body1 {
-  margin-bottom: 40px;
 }
 
 .need-project-cta .cta-bg {
@@ -671,7 +587,6 @@ body {
 
 .note-section {
   padding: 32px 32px 32px 128px;
-  margin: 40px 0;
   background-repeat: no-repeat;
   background-position: 32px 50%;
   border: 1px solid;
@@ -785,10 +700,6 @@ body {
     padding: 40px 0;
   }
 
-  .post-main-content .need-help-container .typography4 {
-    margin-bottom: 4px;
-  }
-
   .post-main-content .need-help-container .buttons-container {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -815,26 +726,14 @@ body {
     gap: 24px;
   }
 
-  .post-main-content .subscription-form .body1 {
-    margin-bottom: 32px;
-  }
-
   .post-main-content .subscription-form .contained-button-pink {
     position: static;
     width: 100%;
   }
 
   .post-main-content .subscription-form .input-container input {
-    margin-bottom: 16px;
     padding-right: 24px;
     width: 100%;
-  }
-
-  .post-main-content .toc-content h3,
-  .post-main-content .toc-content h2,
-  .doc-theme h3,
-  .doc-theme h2 {
-    scroll-margin-top: 75px;
   }
 
   .need-project-cta {
@@ -857,4 +756,42 @@ body {
     padding: 128px 32px 32px;
     text-align: center;
   }
+}
+
+/* Final priority typography overrides */
+.doc-theme,
+.doc-theme * {
+  font-family: Arial, sans-serif;
+  color: #000;
+}
+
+.doc-theme h1,
+.doc-theme .doc-title {
+  font-size: 26pt;
+  line-height: 1.3;
+  text-align: center;
+  font-weight: normal !important;
+}
+
+.doc-theme h2 {
+  font-size: 16pt;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.doc-theme h3 {
+  font-size: 14pt;
+  line-height: 1.4;
+}
+
+.doc-theme p,
+.doc-theme ul,
+.doc-theme ol,
+.doc-theme li {
+  font-size: 11pt;
+  line-height: 1.5;
+}
+
+.doc-theme a {
+  color: #1155cc;
 }
