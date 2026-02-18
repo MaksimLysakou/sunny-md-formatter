@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Markdown Formatter</title>
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" />
+    <link href="https://fonts.cdnfonts.com/css/metropolis-2" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js"
+    ></script>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <main class="app-shell" aria-label="Markdown Formatter App">
+      <header class="app-header">
+        <h1>Sunny Markdown Formatter ☀️</h1>
+      </header>
+      <section class="panes" aria-label="Editor and Preview">
+        <label class="pane pane-editor" for="markdown-input">
+          <span class="pane-title">Markdown</span>
+          <textarea id="markdown-input" spellcheck="false">
+# Sunny Markdown Formatter
+
+Type Markdown on the left.
+Preview updates on the right.
+
+## Features
+
+- Live rendering
+- `markdown-it` parser
+- Clean default styles
+
+> Blockquotes, code, links, and tables are supported.
+
+| Name | Value |
+| --- | --- |
+| Parser | markdown-it |
+| Debounce | 200ms |
+
+```js
+const message = "Hello Markdown";
+console.log(message);
+```
+          </textarea>
+        </label>
+        <section class="pane pane-preview" aria-label="Rendered Preview">
+          <span class="pane-title">Preview</span>
+          <article id="preview" class="doc-theme"></article>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
