@@ -111,13 +111,6 @@ body {
 }
 
 .doc-theme h1,
-.doc-theme .doc-title,
-.doc-theme h2,
-.doc-theme h3 {
-  font-weight: 700;
-}
-
-.doc-theme h1,
 .doc-theme .doc-title {
   font-size: 64px;
   line-height: 80px;
@@ -776,12 +769,13 @@ body {
 .doc-theme h2 {
   font-size: 16pt;
   line-height: 1.4;
-  text-align: left;
+  font-weight: normal !important;
 }
 
 .doc-theme h3 {
   font-size: 14pt;
   line-height: 1.4;
+  font-weight: normal !important;
 }
 
 .doc-theme p,

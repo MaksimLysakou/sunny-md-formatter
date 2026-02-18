@@ -26,6 +26,7 @@
     html: true,
     linkify: true,
     typographer: true,
+    breaks: true,
   });
 
   const defaultHeadingOpen =
@@ -39,7 +40,6 @@
     "mso-style-name:Title",
     "font-family:Arial,sans-serif",
     "font-size:26pt",
-    "font-weight:700",
     "line-height:1.3",
     "color:#000",
     "text-align:center",
